@@ -20,8 +20,6 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/data", dataRoutes);
 
-
-
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
