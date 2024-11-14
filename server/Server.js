@@ -5,15 +5,19 @@ import connectDB from "./Config/db.js";
 import authRoutes from "./Routes/authRoutes.js";
 import dataRoutes from "./Routes/dataRoutes.js";
 
+const corsOptions = {
+  origin: "http://localhost:5173",
+  method: "GET, POST, PUT, DELETE, PATCH, HEAD",
+  credentials: true,
+};
+
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT;
 
 connectDB();
-
-// Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Use the auth routes
