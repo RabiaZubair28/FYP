@@ -11,7 +11,7 @@ const PersonalInfo = () => {
 
     const getDetails = async () => {
         try{
-            const response = await fetch(`http://localhost:3500/api/data/instructor/${params.id}`,{
+            const response = await fetch(`${import.meta.env.VITE_APP_API_URL as string}/api/data/instructor/${params.id}`,{
               method: "GET",
     
             });
@@ -177,7 +177,7 @@ const PersonalInfo = () => {
 
     const getresearchPapers = async () => {
         try{
-            const response = await fetch(`http://localhost:3500/api/data/research/${params.id}`,{
+            const response = await fetch(`${import.meta.env.VITE_APP_API_URL as string}/api/data/research/${params.id}`,{
               method: "GET",
     
             });
