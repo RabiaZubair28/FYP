@@ -6,7 +6,7 @@ import authRoutes from "./Routes/authRoutes.js";
 import dataRoutes from "./Routes/dataRoutes.js";
 
 const corsOptions = {
-  origin: "http://88.222.245.31",
+  origin: "*",
   method: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
 };
